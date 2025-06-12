@@ -3,18 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Weather in Azerbaijan</title>
+  <title>WHEATHERYUS</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Live Weather App</h1>
+  <div class="container">
+    <h1>🌤️ LIVE WEATHERYUS APP</h1>
 
-  <input id="city" type="text" placeholder="Enter city (e.g. Baku)" />
-  <button onclick="getWeather()">Check Weather</button>
+    <div class="search">
+      <input id="city" type="text" placeholder="Enter city (e.g. Baku)" />
+      <button onclick="getWeather()">Check</button>
+    </div>
 
-  <div id="result">
-    <p id="temp"></p>
-    <p id="desc"></p>
+    <div id="loader" class="hidden">Loading...</div>
+
+    <div id="result" class="hidden">
+      <img id="icon" alt="Weather Icon" />
+      <h2 id="cityName"></h2>
+      <p id="temp"></p>
+      <p id="desc"></p>
+    </div>
+
+    <p id="error" class="error"></p>
   </div>
 
   <script src="script.js"></script>
